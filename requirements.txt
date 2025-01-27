@@ -1,0 +1,15 @@
+streamlit
+requests
+fastapi
+uvicorn
+sqlite3
+langchain
+langchain-mistralai
+langchain-community
+sentence-transformers
+chromadb
+transformers
+huggingface-hub
+speechrecognition
+pydub
+simpleaudio
