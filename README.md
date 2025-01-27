@@ -32,4 +32,26 @@ This is a simple chat application built using **FastAPI** for the backend and **
    ```bash
    cd backend
    uvicorn app:app --reload
+6. **Run the frontend application**:
+   ```bash
+   cd ../frontend
+   streamlit run app.py
+
+Usage
+Start the Chat:
+
+Open the Streamlit frontend in your browser.
+
+Use the chat interface to send messages.
+
+Speech-to-Text:
+
+Click the microphone button to activate speech-to-text functionality.
+
+Speak into your microphone, and your speech will be converted to text and sent as a message.
+
+View Chat History:
+
+The chat history is displayed in the Streamlit interface, allowing you to review previous conversations.
+   
    
