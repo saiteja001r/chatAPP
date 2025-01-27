@@ -35,22 +35,26 @@ This is a simple chat application built using **FastAPI** for the backend and **
 6. **Run the frontend application**:
    ```bash
    cd ../frontend
-   streamlit run app.py
+   streamlit run runner.py
 
-Usage
-Start the Chat:
+**Usage**
+**Start the Chat**:
 
 Open the Streamlit frontend in your browser.
 
 Use the chat interface to send messages.
 
-Speech-to-Text:
+**password**:
+username: admin
+password: admin
+
+**Speech-to-Text**:
 
 Click the microphone button to activate speech-to-text functionality.
 
 Speak into your microphone, and your speech will be converted to text and sent as a message.
 
-View Chat History:
+**View Chat History**:
 
 The chat history is displayed in the Streamlit interface, allowing you to review previous conversations.
    
