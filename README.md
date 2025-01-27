@@ -7,8 +7,11 @@ This is a simple chat application built using **FastAPI** for the backend and **
 
 chat_app/
 │
+
 ├── backend/
+
 │ ├── init.py
+
 │ ├── app.py # FastAPI backend code
 │ ├── database.py # Database setup and utilities
 │ └── models.py # Pydantic models for API requests/responses
