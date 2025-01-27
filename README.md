@@ -1,12 +1,11 @@
-# Chat App
-
-This is a simple chat application built using **FastAPI** for the backend and **Streamlit** for the frontend. The application integrates a **Retrieval-Augmented Generation (RAG)** pipeline for enhanced conversational capabilities. It also includes utility functions such as speech-to-text conversion for a more interactive user experience.
-
 
 # Usage video
 
 https://github.com/user-attachments/assets/ddc00884-0b03-483c-98f0-3f0332baebde
 
+# Chat App
+
+This is a simple chat application built using **FastAPI** for the backend and **Streamlit** for the frontend. The application integrates a **Retrieval-Augmented Generation (RAG)** pipeline for enhanced conversational capabilities. It also includes utility functions such as speech-to-text conversion for a more interactive user experience.
 
 ## Features
 
