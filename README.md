@@ -16,7 +16,7 @@ This is a simple chat application built using **FastAPI** for the backend and **
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/chat_app.git
+   git clone https://github.com/saiteja001r/chatAPP.git
    cd chat_app
    
 2. **set up a virtual environment**:
