@@ -34,7 +34,7 @@ qa_chain = None
 def initialize_rag():
     global qa_chain
     with tracing_v2_enabled(project_name="interview"):  # Explicitly enable tracing
-        loader = PyPDFLoader(r"C:\Users\dhira\Desktop\chatAPP\files\Simplifying MLOps_ A Complete Guide On ZenML For Beginners.pdf")
+        loader = PyPDFLoader(r"files/RAG_QA (4).pdf")
         docs = loader.load()
         text_splitter = CharacterTextSplitter(separator="\n\n", chunk_size=500, chunk_overlap=0, is_separator_regex=False)
         chunks = text_splitter.split_documents(docs)
