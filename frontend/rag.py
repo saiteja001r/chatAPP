@@ -11,6 +11,7 @@ import streamlit as st
 import os
 import logging
 from langchain.callbacks.manager import tracing_v2_enabled
+from langchain.prompts import PromptTemplate
 
 # Set LangSmith environment variables
 os.environ["LANGCHAIN_TRACING_V2"] = "true"  # Enable LangSmith tracing
@@ -89,7 +90,30 @@ def get_ai_response(prompt):
     # Rerank the retrieved documents
     reranked_documents = rerank_documents(prompt, documents, top_k=3)
     
-    # Generate a response using the reranked documents
+    # Extract the content of the reranked documents
+    context = "\n\n".join([doc.page_content for doc in reranked_documents])
+    
+    # Define a prompt template for the LLM
+    prompt_template = PromptTemplate(
+        input_variables=["context", "query"],
+        template="""
+        You are an intelligent assistant designed to answer questions based on the provided context. 
+        Use the following context to answer the query at the end. If you don't know the answer, use your knolwede..."
+
+        Context:
+        {context}
+
+        Query: {query}
+
+        Answer:
+        """
+    )
+    
+    # Format the prompt with the context and query
+    engineered_prompt = prompt_template.format(context=context, query=prompt)
+    
+    # Generate a response using the engineered prompt
     with st.spinner("Generating AI response..."):
-        response = qa_chain.run({"query": prompt, "context": reranked_documents})
+        response = qa_chain.run({"query": engineered_prompt})
+    
     return response
